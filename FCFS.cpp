@@ -6,7 +6,7 @@ int main()
 	int sum=0;
 	int head,locations;
 	int i;
-	printf("\nEnter the Number of Locations\n");
+	printf("Enter the Number of Locations\n");
 	scanf("%d",&locations);
 	
 	printf("\nEnter the Head Value\n");
@@ -25,14 +25,19 @@ int main()
 		head=track_request[i];
  sum=sum+sequence[i];
  }
- printf("\n********The Sequence is********\n");
- printf("%d",a);
+ printf("\n********The Seek Order is********\n");
 for(i=0;i<locations;i++)
 	{
-		printf("%d->",track_request[i]);
+		if(i==locations-1)
+		{
+			printf("%d",track_request[i]);
+		}
+		else
+		{
+			printf("%d->",track_request[i]);
+		}
 	}
 printf("\n********Movement of total cylinders********\n");	
  printf("%d",sum);
- 
 }
 
